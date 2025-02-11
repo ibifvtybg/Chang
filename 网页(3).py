@@ -11,7 +11,7 @@ import xgboost as xgb
 
 font_path = 'SimHei.ttf'
 # 2. 创建字体属性对象
-font_prop = fm.FontProperties(fname=font_path)
+font_prop = FontProperties(family='SimHei', size=20)
 # 3. 设置全局字体
 plt.rcParams['font.family'] = font_prop.get_name()
 plt.rcParams['axes.unicode_minus'] = False
@@ -84,18 +84,18 @@ st.markdown("""
     }
   .prediction-result {
         font-size: 24px;
-        color: #ffffff;
+        color: #000000;  # 修改文字颜色为黑色
         margin-top: 30px;
         padding: 20px;
         border-radius: 10px;
-        background: #87CEFA;
+        background: #e0f2ff;  # 修改背景颜色为浅蓝色
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     }
   .advice-text {
         font-size: 20px;
         line-height: 1.6;
-        color: #ffffff;
-        background: #FFA500;
+        color: #000000;  # 修改文字颜色为黑色
+        background: #fff5e0;  # 修改背景颜色为浅黄色
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
