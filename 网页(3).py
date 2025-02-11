@@ -9,8 +9,12 @@ from matplotlib.font_manager import FontProperties
 from xgboost import XGBClassifier
 import xgboost as xgb
 
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定中文字体
-plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+font_path = 'SimHei.ttf'
+# 2. 创建字体属性对象
+font_prop = fm.FontProperties(fname=font_path)
+# 3. 设置全局字体
+plt.rcParams['font.family'] = font_prop.get_name()
+plt.rcParams['axes.unicode_minus'] = False
 
 # 添加复杂的 CSS 样式，修复背景颜色问题
 st.markdown("""
@@ -259,8 +263,6 @@ def predict():
         # 计算每一步的累积值
         for i in range(1, len(contributions_sorted)):
             prev_contributions.append(prev_contributions[-1] + contributions_sorted[i - 1])
-
-        font_prop = FontProperties(family='SimHei')  # 可以根据需要调整字体和大小
 
         # 绘制瀑布图
         for i in range(len(contributions_sorted)):
