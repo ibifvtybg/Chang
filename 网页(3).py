@@ -19,7 +19,7 @@ plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 # 设置全局字体大小
 plt.rcParams.update({
-    'font.size': 20,  # 全局字体大小设置为 16
+    'font.size': 20,  # 全局字体大小设置为 20
 })
 
 # 添加复杂的 CSS 样式，修复背景颜色问题
@@ -285,8 +285,8 @@ def predict():
         plt.title(f'{predicted_class_name} 的特征贡献度瀑布图', fontsize=18, fontproperties=font_prop)
         plt.xlabel('贡献度 (SHAP 值)', fontsize=14, fontproperties=font_prop)
         plt.ylabel('特征', fontsize=14, fontproperties=font_prop)
-        plt.yticks(fontsize=12, fontproperties=font_prop)
-        plt.xticks(fontsize=12, fontproperties=font_prop)
+        plt.yticks(fontsize=20, fontproperties=font_prop)
+        plt.xticks(fontsize=20, fontproperties=font_prop)
         plt.grid(axis='x', linestyle='--', alpha=0.7)
 
         # 增加边距避免裁剪
