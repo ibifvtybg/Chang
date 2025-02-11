@@ -17,6 +17,11 @@ font_prop = fm.FontProperties(fname=font_path)
 plt.rcParams['font.family'] = font_prop.get_name()
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
+# 设置全局字体大小
+plt.rcParams.update({
+    'font.size': 20,  # 全局字体大小设置为 16
+})
+
 # 添加复杂的 CSS 样式，修复背景颜色问题
 st.markdown("""
     <style>
