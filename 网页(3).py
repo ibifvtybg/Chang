@@ -9,12 +9,13 @@ from matplotlib.font_manager import FontProperties
 from xgboost import XGBClassifier
 import xgboost as xgb
 
+# 1. 指定字体文件路径
 font_path = 'SimHei.ttf'
 # 2. 创建字体属性对象
-font_prop = FontProperties(family='SimHei')
+font_prop = fm.FontProperties(fname=font_path)
 # 3. 设置全局字体
 plt.rcParams['font.family'] = font_prop.get_name()
-plt.rcParams['axes.unicode_minus'] = False
+plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 # 添加复杂的 CSS 样式，修复背景颜色问题
 st.markdown("""
@@ -88,14 +89,14 @@ st.markdown("""
         margin-top: 30px;
         padding: 20px;
         border-radius: 10px;
-        background: #9bacc7;
+        background: #87CEFA;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     }
   .advice-text {
         font-size: 20px;
         line-height: 1.6;
         color: #ffffff;
-        background: #f0d193;
+        background: #FFA500;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
