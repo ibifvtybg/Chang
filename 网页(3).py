@@ -9,6 +9,9 @@ from matplotlib.font_manager import FontProperties
 from xgboost import XGBClassifier
 import xgboost as xgb
 
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定中文字体
+plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+
 # 添加复杂的 CSS 样式，修复背景颜色问题
 st.markdown("""
     <style>
