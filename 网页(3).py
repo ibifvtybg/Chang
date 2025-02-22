@@ -31,12 +31,13 @@ st.markdown("""
         color: #ffffff;
         font-family: 'Arial', sans-serif;
     }
-  .title {
-        font-size: 48px;
-        color: #144999;
-        text-align: center;
-        margin-bottom: 30px;
-    }
+.title {
+    font-size: 48px;
+    color: #144999;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold; 
+}
   .subheader {
         font-size: 28px;
         color: #FFD700;
